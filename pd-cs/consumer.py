@@ -32,18 +32,7 @@ class Consumer:
                 new_data.append(new_row)
 
                 print(f'{data["index"]} {new_row.__str__()}')
-
-                # csv 파일 업데이트
-                file_name = "./state_Texas.csv"
-                file_path = os.path.join(os.path.dirname(__file__), file_name)
-                with open(file_path, "a", newline='') as f:
-                    writer = csv.writer(f)
-                    if os.stat(file_path).st_size == 0:  # 파일이 비어있으면 헤더 추가
-                        writer.writerow(['account', 'name', 'street', 'city', 'state', 'Jan', 'Feb', 'Mar'])
-                    writer.writerow(new_row)
-
-
-        print("End State check")
+                print("End State check")
 
 
 if __name__ == '__main__':
