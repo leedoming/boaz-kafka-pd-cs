@@ -24,7 +24,7 @@ class Consumer:
             # 종료 신호인 경우
             if data["row"][0] == "DONE":
                 break
-            # income이 $120K 이상인 경우
+            # State가 Texas인 경우
             if "Texas" in str(data["row"][4]):
                 print("--State Texas")
                 # account, name, street, city, state, Jan, Feb, Mar 정보만 저장
